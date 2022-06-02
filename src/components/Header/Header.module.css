@@ -1,0 +1,13 @@
+.header {
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.header h2 {
+  font-size: 32px;
+}
+
+.header ul,
+.header__nav {
+  gap: 20px;
+}
