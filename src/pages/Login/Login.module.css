@@ -1,0 +1,49 @@
+.login {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  height: 100vh;
+}
+
+.login__form {
+  grid-column: 1;
+  max-width: 500px;
+  margin: 0px auto;
+}
+
+.login__form label {
+  margin-bottom: 12px;
+}
+
+.login__form input,
+.login__form button {
+  padding: 12px;
+  border: none;
+  background: #f3f3f3;
+}
+
+.login__form input {
+  margin-bottom: 14px;
+}
+
+.login__form button {
+  margin-top: 40px;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  border: 1px solid transparent;
+}
+
+.form__forgot {
+  text-align: end;
+}
+
+.form__forgot p {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.login img {
+  grid-column: 2;
+  height: 100vh;
+}
