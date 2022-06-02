@@ -1,0 +1,9 @@
+.apartments {
+  margin-bottom: 100px;
+}
+
+.apartments__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}

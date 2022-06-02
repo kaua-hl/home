@@ -1,0 +1,43 @@
+.card {
+  max-width: max-content;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%);
+  border-radius: 5px;
+}
+
+.card img {
+  object-fit: cover;
+  height: 300px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card__content {
+  padding: 30px;
+}
+
+.card__content div {
+  justify-content: space-between;
+}
+
+.card__content h4 {
+  font-size: 32px;
+}
+
+.card__content h4 span {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.card__content span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.card__specs {
+  padding: 20px 0px 0px;
+  border-top: 1px solid #000;
+}
+
+.card__specs div {
+  display: flex;
+  gap: 10px;
+}
