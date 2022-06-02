@@ -1,0 +1,19 @@
+.container {
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+.dp-flex {
+  display: flex;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 3rem;
+}
+
+.text-n1 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
