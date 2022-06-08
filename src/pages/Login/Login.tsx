@@ -1,41 +1,70 @@
 import React from "react";
 import Error from "../../components/Error/Error";
+import SpecialLayout from "../../layouts/SpecialLayout";
 import styles from "./Login.module.css";
+import { validationSchema } from "../../services/yup/schema";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { FormInputs } from "./models/types";
+import { useDispatch } from "react-redux";
+import { getUser } from "../../store/loginUser";
+import { AppDispatch } from "../../store";
 
 const Login = () => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    console.log(event);
+  const dispatch = useDispatch<AppDispatch>();
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormInputs>({
+    resolver: yupResolver(validationSchema),
+  });
+
+  const submitForm = (values: FormInputs): void => {
+    dispatch(getUser(values));
+    reset({
+      email: "",
+      password: "",
+    });
   };
 
   return (
-    <section className={styles.login}>
-      <form className={styles.login__form}>
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          name="email"
-          placeholder="Digite seu E-mail"
-          onChange={handleChange}
-        />
-        <Error />
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          placeholder="Digite sua senha"
-          onChange={handleChange}
-        />
-        <div className={styles.form__forgot}>
-          <p>Esqueceu sua senha? </p>
-        </div>
-        <button>Enviar</button>
-      </form>
+    <SpecialLayout>
+      <section className={styles.login}>
+        <form
+          className={styles.login__form}
+          onSubmit={handleSubmit(submitForm)}
+        >
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Digite seu E-mail"
+            {...register("email")}
+          />
+          <Error error={errors.email?.message} />
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Digite sua senha"
+            {...register("password")}
+          />
+          <Error error={errors.password?.message} />
+          <div className={styles.form__forgot}>
+            <p>Esqueceu sua senha? </p>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
 
-      <img
-        src={require("../../assets/img/login-bg.jpg")}
-        alt="Background image login"
-      />
-    </section>
+        <img
+          src={require("../../assets/img/login-bg.jpg")}
+          alt="Background image login"
+        />
+      </section>
+    </SpecialLayout>
   );
 };
 
