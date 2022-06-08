@@ -1,15 +1,8 @@
 import "./assets/css/index.css";
-import Header from "./components/Header/Header";
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
+import Routes from "./routes/";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Home />
-    </>
-  );
+  return <Routes />;
 }
 
 export default App;
