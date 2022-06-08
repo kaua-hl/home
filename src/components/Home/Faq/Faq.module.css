@@ -1,0 +1,34 @@
+.faq h2 {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.faq__list {
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+.faq__list div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.faq__list div svg {
+  cursor: pointer;
+}
+
+.faq__list dt {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.faq__list dd {
+  max-width: 70ch;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: rgb(78, 78, 78);
+  margin-bottom: 32px;
+}
