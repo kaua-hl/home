@@ -1,0 +1,24 @@
+.bgNewsletter {
+  background: var(--c-2);
+  padding: 80px 50px;
+}
+
+.newsletter {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  justify-content: space-between;
+}
+
+.newsletter h2 {
+  max-width: 25ch;
+}
+
+.newsletter button {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  border: none;
+  padding: 16px;
+  max-width: 250px;
+}
