@@ -1,0 +1,20 @@
+.nav {
+  border-right: 1px solid #000;
+}
+
+.nav li a {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.nav li + li {
+  display: block;
+  margin-top: 18px;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
+}

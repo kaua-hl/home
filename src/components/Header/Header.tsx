@@ -11,7 +11,7 @@ const Header = () => {
       <nav className={`${styles.header__nav} dp-flex`}>
         <ul className="dp-flex">
           <li>
-            <Link to="/">Apartamentos</Link>
+            <Link to="/apartamentos">Apartamentos</Link>
           </li>
           <li>
             <Link to="#">Sobre</Link>

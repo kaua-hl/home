@@ -1,0 +1,66 @@
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 30px 0px;
+  gap: 20px;
+}
+
+.profileIcons {
+  position: relative;
+}
+
+.profileIcons svg:nth-child(2) {
+  max-width: max-content;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profileDescription h3 {
+  font-size: 36px;
+}
+
+.profileDescription span {
+  color: rgb(100, 100, 100);
+  font-size: 16px;
+}
+
+.userFormData {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 0px 20px;
+  gap: 20px 30px;
+}
+
+.userFormData button {
+  max-width: 300px;
+  grid-column: 1 / -1;
+  margin: 30px auto 0px;
+  background: #222;
+  color: #fff;
+}
+
+form,
+input,
+label,
+button {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+input,
+button {
+  border: 1px solid #222;
+  padding: 12px;
+}
+
+label {
+  margin: 12px 0px;
+}
+
+input {
+  margin: 12px 0px 0px;
+}

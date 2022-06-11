@@ -7,6 +7,6 @@ export const validationSchema = Yup.object().shape({
 
   password: Yup.string()
     .min(6, "Preencha pelo menos 6 caracteres.")
-    .max(8)
-    .required("Esse campo é necessário."),
+    .max(12, "Você está criando um livro? Preencha no máximo 12 caracteres.")
+    .required("Preencha pelo menos 6 caracteres."),
 });

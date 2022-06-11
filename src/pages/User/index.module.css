@@ -1,0 +1,6 @@
+.user {
+  display: grid;
+  grid-template-columns: 400px 2fr;
+  gap: 0px 30px;
+  min-height: 100vh;
+}
